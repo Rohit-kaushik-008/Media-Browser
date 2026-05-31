@@ -1,0 +1,30 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border {
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.pd {
+    padding: 8px 12px;
+}
+
+.mg {
+    margin: 4px 8px;
+}

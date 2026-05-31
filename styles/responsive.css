@@ -1,0 +1,266 @@
+/* ROOT ELEMENTS FOR SPACING */
+:root {
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-normal: 16px;
+    --space-l: 20px;
+    --space-xl: 24px
+}
+
+/* ROOT ELEMENTS FOR COLORS */
+:root {
+    --primary-color: #7c3aed;
+    --primary-color-shade-light: #a855f7;
+    --primary-color-shade-dark: #4c1d95;
+    --accent-color: #22d3ee;
+
+    --background-color: #101427;
+    --background-color-light: #181c2e;
+    --background-color-dark: #040715;
+}
+
+/* ROOT ELEMENTS FOR TYPOGRAPHY */
+:root {
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-para: "Montserrat", sans-serif;
+}
+
+/* ROOT ELEMENTS FOR BACKGROUND AND TEXTS */
+:root {
+    --white-0: hsl(0, 0%, 100%);
+    --white-1: hsl(0, 0%, 90%);
+    --white-2: hsl(0, 0%, 80%);
+
+    --black-0: hsl(0, 0%, 0%);
+    --black-1: hsl(0, 0%, 10%);
+    --black-2: hsl(0, 0%, 20%);
+
+    --text-color: hsl(0, 0%, 96%);
+    --text-muted: hsl(218, 11%, 65%);
+}
+
+
+/* Tablets styles */
+@media (max-width:1024px) {
+
+    .nav-list {
+        display: none;
+    }
+
+    .navbar {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .logo h1 {
+        font-size: calc(var(--space-xl) * 1.25);
+    }
+
+    .profile {
+        height: 50px;
+        width: 50px;
+        margin-right: var(--space-md);
+    }
+
+    .profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search-bar {
+        width: 100%;
+        gap: var(--space-sm);
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+
+    .close-filter {
+        display: none;
+    }
+
+    .filter-heading div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--space-sm);
+        width: 50%;
+
+    }
+
+    .filter-option {
+        display: flex;
+    }
+
+    .filter-features {
+        position: relative;
+    }
+
+    .filter-chunk {
+        position: absolute;
+        width: 70vw;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+    }
+
+    .filter-chunk.active {
+        transform: translateX(0);
+    }
+
+    .display-cards {
+        width: 100%;
+        padding: var(--space-md) var(--space-normal);
+        gap: 30px;
+    }
+
+    .filter-option-menu {
+        display: flex;
+    }
+
+}
+
+/* Mobile Styles */
+
+@media (max-width:568px) {
+
+
+    .nav-list {
+        display: none
+    }
+
+    .navbar {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .logo h1 {
+        font-size: calc(var(--space-xl) * 1.25);
+    }
+
+    .profile {
+        height: 50px;
+        width: 50px;
+        margin-right: var(--space-md);
+    }
+
+    .profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Chunk 2 - HERO + SEARCH BAR */
+
+    .hero-text h2 {
+        font-size: calc(var(--space-l) * 1.25);
+    }
+
+    .hero-text p {
+        font-size: calc(var(--space-md) * 1.25);
+    }
+
+    .search-bar {
+        width: 100%;
+        gap: var(--space-md);
+    }
+
+    .search-bar input {
+        width: 70vw;
+    }
+
+    .search-bar button {
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(var(--space-md) * 1.25);
+    }
+
+    .close-filter {
+        display: block;
+    }
+
+    .filter-option h4 {
+        font-size: var(--space-normal);
+    }
+
+    .filter-option-menu {
+        height: 40px;
+        width: 40px;
+    }
+
+    .filter-option-menu img {
+        width: 20px;
+    }
+
+    .filter-features {
+        position: relative;
+    }
+
+    .filter-chunk {
+        position: absolute;
+        width: 100vw;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-200%);
+        transition: all 0.4s ease;
+    }
+
+    .filter-chunk.active {
+        transform: translateX(0);
+    }
+
+    /* here I want to reduce the size of cards  */
+    .display-cards {
+        padding: var(--space-l) var(--space-md);
+    }
+
+    .display-section h2 {
+        font-size: calc(var(--space-l) * 1.25);
+        margin-left: var(--space-sm)
+    }
+
+    .card {
+        /* border: 2px solid red; */
+        max-width: calc(250px * 0.7);
+        max-height: calc(380px * 0.85);
+        padding: var(--space-xs);
+    }
+
+    .card-image img {
+        height: 250px
+    }
+
+    .filter-option-menu {
+        display: flex;
+    }
+
+    .watchlist-items {
+        justify-content: center;
+    }
+
+    .watchlist-filters {
+        font-size: var(--space-md);
+        justify-content: space-between;
+        padding: var(--space-md) 0;
+        gap: var(--space-md);
+    }
+
+    #watchlist-section {
+        padding: var(--space-sm) 0;
+    }
+}

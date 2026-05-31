@@ -1,0 +1,95 @@
+/* ROOT ELEMENTS FOR SPACING */
+:root {
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-normal: 16px;
+    --space-l: 20px;
+    --space-xl: 24px
+}
+
+/* ROOT ELEMENTS FOR COLORS */
+:root {
+    --primary-color: #7c3aed;
+    --primary-color-shade-light: #a855f7;
+    --primary-color-shade-dark: #4c1d95;
+    --accent-color: #22d3ee;
+
+    --background-color: #101427;
+    --background-color-light: #181c2e;
+    --background-color-dark: #040715;
+}
+
+/* ROOT ELEMENTS FOR TYPOGRAPHY */
+:root {
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-para: "Montserrat", sans-serif;
+}
+
+/* ROOT ELEMENTS FOR BACKGROUND AND TEXTS */
+:root {
+    --white-0: hsl(0, 0%, 100%);
+    --white-1: hsl(0, 0%, 90%);
+    --white-2: hsl(0, 0%, 80%);
+
+    --black-0: hsl(0, 0%, 0%);
+    --black-1: hsl(0, 0%, 10%);
+    --black-2: hsl(0, 0%, 20%);
+
+    --text-color: hsl(0, 0%, 96%);
+    --text-muted: hsl(218, 11%, 65%);
+}
+
+
+#results-section {
+    /* border: 2px solid white; */
+    height: auto;
+}
+
+#results-section h2 {
+    font-family: var(--font-para);
+    font-size: calc(var(--space-xl) * 1.25);
+    text-align: center;
+    margin-bottom: var(--space-l);
+
+}
+
+#results-section hr {
+    opacity: 0.4;
+    margin: 0px var(--space-sm);
+}
+
+#results-section .result-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#results-section .result-container .card {
+    flex: 1,1,1;
+}
+
+.display-cards {
+    min-height: 900px;
+}
+
+#results-section.hidden {
+    display: none;
+}
+
+.filter-type-buttons button.active {
+    background-color: var(--primary-color-shade-light);
+    box-shadow: 2px 2px 18px var(--primary-color-shade-dark);
+}
+
+.trending.deactivate, 
+.most-fav.deactivate, 
+.top-shows.deactivate, 
+.top-movies.deactivate {
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniMo-Show</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/utilis.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/state.css">
+</head>
+
+<body>
+
+    <!-- ============/ CHUNK 1 - NAVBAR /============ -->
+    <header class="header">
+
+        <nav class="navbar flex-between">
+
+            <!-- WEB LOGO -->
+            <div class="logo flex">
+                <img src="https://cdn-icons-png.flaticon.com/512/16908/16908236.png" alt="">
+                <h1>AniMo Show</h1>
+            </div>
+
+            <!-- NAV LISTS -->
+            <ul class="nav-list flex">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MOVIES</a></li>
+                <li><a href="#">TV SHOWS</a></li>
+                <li><a href="#">ANIME</a></li>
+            </ul>
+
+            <div class="profile">
+                <img src="https://i.pinimg.com/736x/68/45/80/684580b7ec1c4a65ce2a533a04d964a2.jpg" alt="">
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ============/ CHUNK 2 - HERO + SEARCH BAR /============ -->
+
+    <main class="hero">
+
+        <img class="hero-bg-img" src="Assets/anime-dark-purple.jpg" alt="">
+
+        <div class="hero-text">
+            <h1>Search Movies, TV Shows, and Anime</h1>
+            <h2>Discover.Explore.Enjoy</h2>
+            <p>Find best rated recommendations for you</p>
+        </div>
+
+        <div class="search-bar">
+            <input id="search-box" type="text" autocomplete="off"
+                placeholder="Search for Movies, TV Shows and Anime...">
+            <button id="search-button">Search</button>
+        </div>
+
+    </main>
+
+
+
+    <!-- ===========/ CHUNK 3 - FILTER & SIDEBAR /=========== -->
+    <main class="filter-features">
+
+        <aside class="filter-chunk">
+
+            <div class="filter-heading">
+                <h2>Filters</h2>
+                <div class="flex">
+                    <button>Reset All</button>
+                    <button class="close-filter"><img src="Assets/menu.png" alt=""></button>
+                </div>
+            </div>
+
+
+
+            <div class="filter-type">
+                <h3>Type</h3>
+
+                <div class="filter-type-buttons">
+                    <button id="movie-btn">Movie</button>
+                    <button id="tv-btn">TV Shows</button>
+                    <button id="anime-btn">Anime</button>
+                </div>
+
+            </div>
+
+            <div class="genre-box">
+
+                <div class="genre-heading">
+                    <h3>Genre</h3>
+                    <img src="Assets/arrow-down.svg" alt="ad">
+                </div>
+
+                <div class="genres">
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="action" data-genre="Action">
+                        <p>Action</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Adventure" data-genre="Adventure">
+                        <p>Adventure</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Drama" data-genre="Drama">
+                        <p>Drama</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Thrill" data-genre="Thriller">
+                        <p>Thriller</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Crime" data-genre="Crime">
+                        <p>Crime</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Romance" data-genre="Romance">
+                        <p>Romance</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Sci-Fi" data-genre="Sci-Fi">
+                        <p>Sci-Fi</p>
+                    </div>
+
+                    <div class="genre-type">
+                        <input type="checkbox" name="genre" id="Supernatural" data-genre="Supernatural">
+                        <p>Supernatural</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="my-list">
+                <h2>My List</h2>
+            </div>
+
+            <div class="my-list home">
+                <h2>Home</h2>
+            </div>
+            
+
+        </aside>
+
+
+
+        <!-- ===========/ CHUNK 4 - DISPLAY RESULTS /=========== -->
+        <section class="display-cards">
+
+            <div class="filter-option">
+
+
+                <div class="sort-container">
+
+                    <h3>Sort by : </h3>
+
+                    <div class="sortingOptions">
+
+                        <button class="sort-btn">
+                            <p class="selectionSortOption">Select</p>
+                            <img src="Assets/arrow-down.svg" alt="">
+                        </button>
+
+                        <div class="sort-dropdown">
+
+                            <div class="sort-option" data-sort="Default">
+                                Default
+                            </div>
+                            <div class="sort-option" data-sort="highestRated">Highest Rated</div>
+                            <div class="sort-option" data-sort="lowestRated">Lowest Rated</div>
+                            <div class="sort-option" data-sort="Newest">Newest</div>
+                            <div class="sort-option" data-sort="Oldest">Oldest</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="filter-option-menu" id="filter-button">
+                    <img src="Assets/hamburger.png" alt="">
+                </div>
+            </div>
+
+            <div class="hidden" id="results-section">
+
+                <h2>Results</h2>
+
+                <hr>
+
+                <div class="result-container card-container">
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="watchlist-container hidden">
+
+                <h2 class="watchlist-heading">My Watchlist</h2>
+
+                <div id="watchlist-section">
+
+
+                    <div class="watchlist-filters">
+                        <h3 
+                            class="status-button"
+                            data-status="watchLater">
+                            Watch Later
+                        </h3>
+                        <h3 
+                            class="status-button"
+                            data-status="watching">
+                            Watching
+                        </h3>
+                        <h3 
+                            class="status-button"
+                            data-status="watched">
+                            Completed
+                        </h3>
+                    </div>
+
+                    <hr>
+
+                    <div class="watchlist-items">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="display-section trending">
+
+                <h2>Trending</h2>
+
+                <div class="card-container" id="trending-section">
+
+
+                </div>
+
+            </div>
+
+            <div class="display-section most-fav">
+
+                <h2>Most Favourite</h2>
+
+                <div class="card-container" id="fav-section">
+
+
+                </div>
+
+
+            </div>
+
+            <div class="display-section top-shows">
+
+                <h2>Top Shows</h2>
+
+
+                <div class="card-container" id="top-shows-section">
+
+
+                </div>
+
+
+            </div>
+
+            <div class="display-section top-movies">
+
+                <h2>Top Movies</h2>
+
+                <div class="card-container" id="top-movies-section">
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!--   CHUNK 5 - FOOTER -->
+
+    <footer class="footer">
+
+
+
+    </footer>
+
+
+
+
+
+    <script type="module" src="/Scripts/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+const data = [
+    {
+        "id": 1,
+        "title": "The Shawshank Redemption",
+        "type": "Movie",
+        "year": 1994,
+        "rating": 9.3,
+        "episodes": null,
+        "seasons": null,
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "genre": ["Drama", "Crime"],
+        "image": "https://i.pinimg.com/webp/736x/bb/0e/f9/bb0ef99b7d71bb27e22f57d2156b7b5d.webp"
+    },
+    {
+        "id": 2,
+        "title": "Breaking Bad",
+        "type": "TV",
+        "year": 2008,
+        "rating": 9.5,
+        "episodes": 62,
+        "seasons": 5,
+        "description": "A high school chemistry teacher turned methamphetamine producer partners with a former student.",
+        "genre": ["Crime", "Drama", "Thriller"],
+        "image": "https://i.pinimg.com/webp/1200x/37/62/75/37627587496965efcc0ae42ac9dff525.webp"
+    },
+    {
+        "id": 3,
+        "title": "Death Note",
+        "type": "Anime",
+        "year": 2006,
+        "rating": 9.0,
+        "episodes": 37,
+        "seasons": 2,
+        "description": "A high school student discovers a supernatural notebook that allows him to kill anyone by writing their name.",
+        "genre": ["Supernatural", "Thriller", "Psychological"],
+        "image": "https://i.pinimg.com/webp/736x/76/10/63/761063ae03ccacb59ec6e8a2df8888f3.webp"
+    },
+    {
+        "id": 4,
+        "title": "The Dark Knight",
+        "type": "Movie",
+        "year": 2008,
+        "rating": 9.0,
+        "episodes": null,
+        "seasons": null,
+        "description": "Batman faces off against the Joker, a criminal mastermind who wants to plunge Gotham into anarchy.",
+        "genre": ["Action", "Crime", "Drama"],
+        "image": "https://i.pinimg.com/736x/2f/4b/c7/2f4bc76594178aea5a4a65585cbf5d29.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Naruto Shippuden",
+        "type": "Anime",
+        "year": 2007,
+        "rating": 8.7,
+        "episodes": 500,
+        "seasons": 20,
+        "description": "Naruto and his friends battle powerful ninjas and work to prevent a Fourth Great Ninja War.",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "image": "https://i.pinimg.com/736x/70/7d/a9/707da904011941148e394dc0221d8fc4.jpg"
+    },
+    {
+        "id": 6,
+        "title": "The Crown",
+        "type": "TV",
+        "year": 2016,
+        "rating": 8.2,
+        "episodes": 50,
+        "seasons": 5,
+        "description": "A biographical drama about the life of Queen Elizabeth II and the political upheavals in the 20th century.",
+        "genre": ["Biography", "Drama", "History"],
+        "image": "https://i.pinimg.com/1200x/64/12/3d/64123ddeb1e074abe4d73e25b8ebfe71.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Inception",
+        "type": "Movie",
+        "year": 2016,
+        "rating": 8.8,
+        "episodes": null,
+        "seasons": null,
+        "description": "A skilled thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
+        "genre": ["Action", "Sci-Fi", "Thriller"],
+        "image": "https://i.pinimg.com/webp/1200x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.webp"
+    },
+    {
+        "id": 8,
+        "title": "Attack on Titan",
+        "type": "Anime",
+        "year": 2013,
+        "rating": 9.8,
+        "episodes": 139,
+        "seasons": 4,
+        "description": "Humanity fights for survival against giant humanoid creatures called Titans that devour humans.",
+        "genre": ["Action", "Drama", "Fantasy"],
+        "image": "https://i.pinimg.com/webp/736x/67/b6/90/67b690140f09b858dd942c7a35e434e2.webp"
+    },
+    {
+        "id": 9,
+        "title": "Stranger Things",
+        "type": "TV",
+        "year": 2016,
+        "rating": 8.7,
+        "episodes": 42,
+        "seasons": 4,
+        "description": "When a young boy disappears, his friends and family uncover a mystery involving secret government experiments and terrifying supernatural forces.",
+        "genre": ["Drama", "Fantasy", "Horror"],
+        "image": "https://i.pinimg.com/1200x/2c/e0/3d/2ce03d78e8151f9c7a406d486c131e2e.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Pulp Fiction",
+        "type": "Movie",
+        "year": 1994,
+        "rating": 8.9,
+        "episodes": null,
+        "seasons": null,
+        "description": "The lives of four criminals intersect in a series of interlocking stories involving a mysterious briefcase.",
+        "genre": ["Crime", "Drama"],
+        "image": "https://i.pinimg.com/736x/13/86/fc/1386fceac7c2ab0146473d38e680a557.jpg"
+    },
+    {
+        "id": 11,
+        "title": "One Piece",
+        "type": "Anime",
+        "year": 1999,
+        "rating": 9.0,
+        "episodes": 1000,
+        "seasons": 20,
+        "description": "A young pirate with rubber powers sails the seas searching for the legendary One Piece treasure.",
+        "genre": ["Action", "Adventure", "Comedy"],
+        "image": "https://i.pinimg.com/736x/11/9a/ad/119aad3c7d98b9bf795ee7b2eb753791.jpg"
+    },
+    {
+        "id": 12,
+        "title": "The Office",
+        "type": "TV",
+        "year": 2005,
+        "rating": 9.0,
+        "episodes": 201,
+        "seasons": 9,
+        "description": "A mockumentary following the everyday lives of office employees at the Dunder Mifflin paper company.",
+        "genre": ["Comedy"],
+        "image": "https://i.pinimg.com/736x/f7/99/cc/f799cc21c55a77d895c33d7e1b6da383.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Interstellar",
+        "type": "Movie",
+        "year": 2014,
+        "rating": 8.6,
+        "episodes": null,
+        "seasons": null,
+        "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "genre": ["Adventure", "Drama", "Sci-Fi"],
+        "image": "https://i.pinimg.com/webp/736x/3f/09/dd/3f09ddcc1d3c3740f6a74e63d57fba61.webp"
+    },
+    {
+        "id": 14,
+        "title": "Full Metal Alchemist: Brotherhood",
+        "type": "Anime",
+        "year": 2009,
+        "rating": 9.1,
+        "episodes": 64,
+        "seasons": 5,
+        "description": "Two brothers seek the Philosopher's Stone to restore their bodies after a failed alchemical experiment.",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "image": "https://i.pinimg.com/736x/50/10/30/5010309ba155597bfa937bcb40131ab5.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Friends",
+        "type": "TV",
+        "year": 1994,
+        "rating": 8.9,
+        "episodes": 236,
+        "seasons": 10,
+        "description": "Six friends living in New York City navigate through life, love, careers, and everything in between.",
+        "genre": ["Comedy", "Romance"],
+        "image": "https://i.pinimg.com/736x/91/d6/f4/91d6f42753fa2b5cd9c1ae17b88a80e5.jpg"
+    },
+    {
+        "id": 16,
+        "title": "The Matrix",
+        "type": "Movie",
+        "year": 1999,
+        "rating": 8.7,
+        "episodes": null,
+        "seasons": null,
+        "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
+        "genre": ["Action", "Sci-Fi"],
+        "image": "https://i.pinimg.com/webp/736x/62/f2/41/62f241fd34d94f303a71df7fc7274fbb.webp"
+    },
+    {
+        "id": 17,
+        "title": "Demon Slayer",
+        "type": "Anime",
+        "year": 2019,
+        "rating": 8.8,
+        "episodes": 55,
+        "seasons": 3,
+        "description": "A young demon slayer embarks on a quest to save his sister who was turned into a demon.",
+        "genre": ["Action", "Adventure", "Supernatural"],
+        "image": "https://i.pinimg.com/webp/736x/b3/e4/2d/b3e42d42ed3985cde0b3fd5beeb4276f.webp"
+    },
+    {
+        "id": 18,
+        "title": "The Mandalorian",
+        "type": "TV",
+        "year": 2019,
+        "rating": 8.7,
+        "episodes": 16,
+        "seasons": 3,
+        "description": "A lone bounty hunter operates in the Star Wars outer reaches, protecting a mysterious child.",
+        "genre": ["Action", "Adventure", "Sci-Fi"],
+        "image": "https://i.pinimg.com/webp/736x/49/7b/8b/497b8bdd152ea05fce5654a0b8c799f7.webp"
+    },
+    {
+        "id": 19,
+        "title": "Forrest Gump",
+        "type": "Movie",
+        "year": 1994,
+        "rating": 8.8,
+        "episodes": null,
+        "seasons": null,
+        "description": "A simple man inadvertently influences several defining historical events and outcomes while pursuing his childhood sweetheart.",
+        "genre": ["Drama", "Romance"],
+        "image": "https://i.pinimg.com/webp/1200x/8e/d7/a9/8ed7a9baeae932abec095d109d306fb3.webp"
+    },
+    {
+        "id": 20,
+        "title": "Steins;Gate",
+        "type": "Anime",
+        "year": 2011,
+        "rating": 9.0,
+        "episodes": 24,
+        "seasons": 1,
+        "description": "A self-proclaimed mad scientist and his friends discover that microwaves can send data back in time.",
+        "genre": ["Sci-Fi", "Thriller"],
+        "image": "https://i.pinimg.com/736x/58/56/29/5856290dec79fffbab643abbd71f9eb7.jpg"
+    }
+]
+
+data.forEach(item => {
+    item.status = "none"
+});
+
+export {data};
+
+// NEXT THINGS YOU SHOULD BUILD
+
+// Perfect next steps:
+
+// 1. Search functionality
+// real-time filtering
+// 2. Genre filters
+// 3. Type filters
+// 4. Details modal/page
+
+// Click card → open full info.
+
+// 5. Save favorites
+// 6. Local storage
+// 7. Debounced search
+
+// Advanced frontend concept.
+
+// 8. Skeleton loading UI
+// 9. API integration later
+
+// TMDB/Jikan API.
+
+
+// so Finally my project has a searching, ranking, sorting,     filter features.
+// So now the core concept and use-case is completed. 
+// Now I am thinking that I should add more features like : 
+// 1. Save favorites : now user can save their favorite items like a watchlist.
+// 2. Local Storage : so user don't lose their watchlist.
+// 3. Debounced Search which I already implemented
+// 4. API integration so I user can get large amount of library. I am thinking to use TMDB API.
