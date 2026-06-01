@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         "id": 1,
         "title": "The Shawshank Redemption",
@@ -9,7 +9,8 @@ const data = [
         "seasons": null,
         "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "genre": ["Drama", "Crime"],
-        "image": "https://i.pinimg.com/webp/736x/bb/0e/f9/bb0ef99b7d71bb27e22f57d2156b7b5d.webp"
+        "image": "https://i.pinimg.com/webp/736x/bb/0e/f9/bb0ef99b7d71bb27e22f57d2156b7b5d.webp",
+        "status" : "none"
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@ const data = [
         "seasons": 5,
         "description": "A high school chemistry teacher turned methamphetamine producer partners with a former student.",
         "genre": ["Crime", "Drama", "Thriller"],
-        "image": "https://i.pinimg.com/webp/1200x/37/62/75/37627587496965efcc0ae42ac9dff525.webp"
+        "image": "https://i.pinimg.com/webp/1200x/37/62/75/37627587496965efcc0ae42ac9dff525.webp",
+        "status" : "none"
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@ const data = [
         "seasons": 2,
         "description": "A high school student discovers a supernatural notebook that allows him to kill anyone by writing their name.",
         "genre": ["Supernatural", "Thriller", "Psychological"],
-        "image": "https://i.pinimg.com/webp/736x/76/10/63/761063ae03ccacb59ec6e8a2df8888f3.webp"
+        "image": "https://i.pinimg.com/webp/736x/76/10/63/761063ae03ccacb59ec6e8a2df8888f3.webp",
+        "status" : "none"
     },
     {
         "id": 4,
@@ -45,7 +48,8 @@ const data = [
         "seasons": null,
         "description": "Batman faces off against the Joker, a criminal mastermind who wants to plunge Gotham into anarchy.",
         "genre": ["Action", "Crime", "Drama"],
-        "image": "https://i.pinimg.com/736x/2f/4b/c7/2f4bc76594178aea5a4a65585cbf5d29.jpg"
+        "image": "https://i.pinimg.com/736x/2f/4b/c7/2f4bc76594178aea5a4a65585cbf5d29.jpg",
+        "status" : "none"
     },
     {
         "id": 5,
@@ -57,7 +61,8 @@ const data = [
         "seasons": 20,
         "description": "Naruto and his friends battle powerful ninjas and work to prevent a Fourth Great Ninja War.",
         "genre": ["Action", "Adventure", "Fantasy"],
-        "image": "https://i.pinimg.com/736x/70/7d/a9/707da904011941148e394dc0221d8fc4.jpg"
+        "image": "https://i.pinimg.com/736x/70/7d/a9/707da904011941148e394dc0221d8fc4.jpg",
+        "status" : "none"
     },
     {
         "id": 6,
@@ -69,7 +74,8 @@ const data = [
         "seasons": 5,
         "description": "A biographical drama about the life of Queen Elizabeth II and the political upheavals in the 20th century.",
         "genre": ["Biography", "Drama", "History"],
-        "image": "https://i.pinimg.com/1200x/64/12/3d/64123ddeb1e074abe4d73e25b8ebfe71.jpg"
+        "image": "https://i.pinimg.com/1200x/64/12/3d/64123ddeb1e074abe4d73e25b8ebfe71.jpg",
+        "status" : "none"
     },
     {
         "id": 7,
@@ -81,7 +87,8 @@ const data = [
         "seasons": null,
         "description": "A skilled thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
         "genre": ["Action", "Sci-Fi", "Thriller"],
-        "image": "https://i.pinimg.com/webp/1200x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.webp"
+        "image": "https://i.pinimg.com/webp/1200x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.webp",
+        "status" : "none"
     },
     {
         "id": 8,
@@ -93,7 +100,8 @@ const data = [
         "seasons": 4,
         "description": "Humanity fights for survival against giant humanoid creatures called Titans that devour humans.",
         "genre": ["Action", "Drama", "Fantasy"],
-        "image": "https://i.pinimg.com/webp/736x/67/b6/90/67b690140f09b858dd942c7a35e434e2.webp"
+        "image": "https://i.pinimg.com/webp/736x/67/b6/90/67b690140f09b858dd942c7a35e434e2.webp",
+        "status" : "none"
     },
     {
         "id": 9,
@@ -105,7 +113,8 @@ const data = [
         "seasons": 4,
         "description": "When a young boy disappears, his friends and family uncover a mystery involving secret government experiments and terrifying supernatural forces.",
         "genre": ["Drama", "Fantasy", "Horror"],
-        "image": "https://i.pinimg.com/1200x/2c/e0/3d/2ce03d78e8151f9c7a406d486c131e2e.jpg"
+        "image": "https://i.pinimg.com/1200x/2c/e0/3d/2ce03d78e8151f9c7a406d486c131e2e.jpg",
+        "status" : "none"
     },
     {
         "id": 10,
@@ -117,7 +126,8 @@ const data = [
         "seasons": null,
         "description": "The lives of four criminals intersect in a series of interlocking stories involving a mysterious briefcase.",
         "genre": ["Crime", "Drama"],
-        "image": "https://i.pinimg.com/736x/13/86/fc/1386fceac7c2ab0146473d38e680a557.jpg"
+        "image": "https://i.pinimg.com/736x/13/86/fc/1386fceac7c2ab0146473d38e680a557.jpg",
+        "status" : "none"
     },
     {
         "id": 11,
@@ -129,7 +139,8 @@ const data = [
         "seasons": 20,
         "description": "A young pirate with rubber powers sails the seas searching for the legendary One Piece treasure.",
         "genre": ["Action", "Adventure", "Comedy"],
-        "image": "https://i.pinimg.com/736x/11/9a/ad/119aad3c7d98b9bf795ee7b2eb753791.jpg"
+        "image": "https://i.pinimg.com/736x/11/9a/ad/119aad3c7d98b9bf795ee7b2eb753791.jpg",
+        "status" : "none"
     },
     {
         "id": 12,
@@ -141,7 +152,8 @@ const data = [
         "seasons": 9,
         "description": "A mockumentary following the everyday lives of office employees at the Dunder Mifflin paper company.",
         "genre": ["Comedy"],
-        "image": "https://i.pinimg.com/736x/f7/99/cc/f799cc21c55a77d895c33d7e1b6da383.jpg"
+        "image": "https://i.pinimg.com/736x/f7/99/cc/f799cc21c55a77d895c33d7e1b6da383.jpg",
+        "status" : "none"
     },
     {
         "id": 13,
@@ -153,7 +165,8 @@ const data = [
         "seasons": null,
         "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
         "genre": ["Adventure", "Drama", "Sci-Fi"],
-        "image": "https://i.pinimg.com/webp/736x/3f/09/dd/3f09ddcc1d3c3740f6a74e63d57fba61.webp"
+        "image": "https://i.pinimg.com/webp/736x/3f/09/dd/3f09ddcc1d3c3740f6a74e63d57fba61.webp",
+        "status" : "none"
     },
     {
         "id": 14,
@@ -165,7 +178,8 @@ const data = [
         "seasons": 5,
         "description": "Two brothers seek the Philosopher's Stone to restore their bodies after a failed alchemical experiment.",
         "genre": ["Action", "Adventure", "Fantasy"],
-        "image": "https://i.pinimg.com/736x/50/10/30/5010309ba155597bfa937bcb40131ab5.jpg"
+        "image": "https://i.pinimg.com/736x/50/10/30/5010309ba155597bfa937bcb40131ab5.jpg",
+        "status" : "none"
     },
     {
         "id": 15,
@@ -177,7 +191,8 @@ const data = [
         "seasons": 10,
         "description": "Six friends living in New York City navigate through life, love, careers, and everything in between.",
         "genre": ["Comedy", "Romance"],
-        "image": "https://i.pinimg.com/736x/91/d6/f4/91d6f42753fa2b5cd9c1ae17b88a80e5.jpg"
+        "image": "https://i.pinimg.com/736x/91/d6/f4/91d6f42753fa2b5cd9c1ae17b88a80e5.jpg",
+        "status" : "none"
     },
     {
         "id": 16,
@@ -189,7 +204,8 @@ const data = [
         "seasons": null,
         "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
         "genre": ["Action", "Sci-Fi"],
-        "image": "https://i.pinimg.com/webp/736x/62/f2/41/62f241fd34d94f303a71df7fc7274fbb.webp"
+        "image": "https://i.pinimg.com/webp/736x/62/f2/41/62f241fd34d94f303a71df7fc7274fbb.webp",
+        "status" : "none"
     },
     {
         "id": 17,
@@ -201,7 +217,8 @@ const data = [
         "seasons": 3,
         "description": "A young demon slayer embarks on a quest to save his sister who was turned into a demon.",
         "genre": ["Action", "Adventure", "Supernatural"],
-        "image": "https://i.pinimg.com/webp/736x/b3/e4/2d/b3e42d42ed3985cde0b3fd5beeb4276f.webp"
+        "image": "https://i.pinimg.com/webp/736x/b3/e4/2d/b3e42d42ed3985cde0b3fd5beeb4276f.webp",
+        "status" : "none"
     },
     {
         "id": 18,
@@ -213,7 +230,8 @@ const data = [
         "seasons": 3,
         "description": "A lone bounty hunter operates in the Star Wars outer reaches, protecting a mysterious child.",
         "genre": ["Action", "Adventure", "Sci-Fi"],
-        "image": "https://i.pinimg.com/webp/736x/49/7b/8b/497b8bdd152ea05fce5654a0b8c799f7.webp"
+        "image": "https://i.pinimg.com/webp/736x/49/7b/8b/497b8bdd152ea05fce5654a0b8c799f7.webp",
+        "status" : "none"
     },
     {
         "id": 19,
@@ -225,7 +243,8 @@ const data = [
         "seasons": null,
         "description": "A simple man inadvertently influences several defining historical events and outcomes while pursuing his childhood sweetheart.",
         "genre": ["Drama", "Romance"],
-        "image": "https://i.pinimg.com/webp/1200x/8e/d7/a9/8ed7a9baeae932abec095d109d306fb3.webp"
+        "image": "https://i.pinimg.com/webp/1200x/8e/d7/a9/8ed7a9baeae932abec095d109d306fb3.webp",
+        "status" : "none"
     },
     {
         "id": 20,
@@ -237,15 +256,16 @@ const data = [
         "seasons": 1,
         "description": "A self-proclaimed mad scientist and his friends discover that microwaves can send data back in time.",
         "genre": ["Sci-Fi", "Thriller"],
-        "image": "https://i.pinimg.com/736x/58/56/29/5856290dec79fffbab643abbd71f9eb7.jpg"
+        "image": "https://i.pinimg.com/736x/58/56/29/5856290dec79fffbab643abbd71f9eb7.jpg",
+        "status" : "none"
     }
 ]
 
-data.forEach(item => {
-    item.status = "none"
-});
+// data.forEach(item => {
+//     item.status = "none"
+// });
 
-export {data};
+// export {data};
 
 // NEXT THINGS YOU SHOULD BUILD
 

@@ -258,6 +258,7 @@ body {
     padding: var(--space-sm);
     padding-bottom: var(--space-xl);
     background-color: var(--background-color-dark);
+    z-index: 9999;
 }
 
 .filter-heading {
@@ -447,7 +448,6 @@ body {
 }
 
 .card-container {
-    margin: 4px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -472,6 +472,7 @@ body {
     padding: var(--space-sm);
     margin-top: var(--space-l);
     transition: all 0.4s ease;
+    position: relative;
 }
 
 .card-image {
@@ -520,9 +521,11 @@ body {
 .card-info {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: var(--space-md);
     font-family: var(--font-para);
     padding: var(--space-sm) var(--space-xs);
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card-info h3 {
@@ -534,6 +537,51 @@ body {
 
 .card-info p {
     margin-left: calc(var(--space-xs) * 0.5);
+}
+
+.card-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.card-actions {
+    padding: var(--space-xs) var(--space-sm);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-md);
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 80px;
+    right: 5px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: all 0.3s ease-in;
+}
+
+.card:hover .card-actions {
+    visibility: visible;
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.card-actions img {
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.card-actions button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: var(--space-xl);
+    cursor: pointer;
 }
 
 .filter-option {

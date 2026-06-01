@@ -43,12 +43,62 @@ let sortOption = document.querySelector('.selectionSortOption');
 const input = document.getElementById('search-box');
 const searchButton = document.getElementById('search-button')
 
-const myList = document.querySelector('.my-list');
-const home = document.querySelector('.home');
+const myList = document.getElementById('watchlist');
+const home = document.getElementById('homepage');
 const watchlistContainer = document.querySelector('.watchlist-container');
 
 const myListContainer = document.querySelector('.watchlist-items')
 const watchlistFilters = document.querySelector('.watchlist-filters');
+
+const displayCardsContainer = document.querySelector('.display-cards')
+
+
+function handleBookmark() {
+    let bookmark = e.target.closest(".bookmark-save");
+
+    if (!bookmark) return;
+
+    const card = bookmark.closest('.card')
+    const id = Number(card.dataset.id);
+
+    const item = data.find((show) => show.id === id)
+
+    if (item.status === "none") {
+        item.status = "watchLater";
+        bookmark.src === bookmarkIcon;
+    }
+    else {
+        item.status = "none";
+        bookmark.src === bookmarkSaved;
+    }
+}
+
+
+const bookmarkIcon = "Assets/bookmark.png";
+const bookmarkSaved = "Assets/bookmark saved.png";
+
+displayCardsContainer.addEventListener('click', (e) => {
+
+    let bookmark = e.target.closest(".bookmark-save");
+
+    if (!bookmark) return;
+
+    const card = bookmark.closest('.card')
+    const id = Number(card.dataset.id);
+
+    const item = data.find((show) => show.id === id)
+
+    if (item.status === "none") {
+        item.status = "watchLater";
+        bookmark.src = bookmarkSaved;
+    }
+    else {
+        item.status = "none";
+        bookmark.src = bookmarkIcon;
+    }
+})
+
+
 
 let activeStatus = "watchLater"
 
@@ -68,8 +118,8 @@ function handleStatus(e) {
         .querySelectorAll('[data-status]')
         .forEach(btn => btn.classList.remove('selected'));
 
-    card.classList.add('selected'); 
-    
+    card.classList.add('selected');
+
     renderCards(
         filterStatus(data, status),
         myListContainer
@@ -81,17 +131,21 @@ watchlistFilters.addEventListener('click', (e) => {
     handleStatus(e);
 })
 
-
-myList.addEventListener('click', () => {
-    
-    watchlistContainer.classList.remove('hidden')
-    hideDefaultSections();
-})
-
 home.addEventListener('click', () => {
+
     watchlistContainer.classList.add('hidden');
     resultSection.classList.add('add');
+    toggleSidebar(filterSideBar);
+    resultSection.classList.add('hidden');
     showDefaultSections();
+})
+
+myList.addEventListener('click', () => {
+
+    watchlistContainer.classList.remove('hidden')
+    toggleSidebar(filterSideBar);
+    resultSection.classList.add('hidden');
+    hideDefaultSections();
 })
 
 
