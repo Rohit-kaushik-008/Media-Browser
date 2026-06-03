@@ -1,12 +1,15 @@
 // IMPORTING DATA FROM OTHER FILES
 import { renderCards, toggleSidebar } from "./ui.js";
-import { data } from "./data.js";
+import { data as initialData } from "./data.js";
 import { getTrending, getMostFav, getTopMovies, getTopShows } from "./filter.js"
 import { sortData } from "./sortData.js";
 import { filters } from "./FilterData.js";
 import { searchItem } from "./searchMedia.js";
 import { filterStatus } from "./filterStatus.js";
 import { saveItems, loadItems } from "./localStorage.js";
+
+
+let data = loadItems() || initialData;
 
 // =======================================================
 
@@ -337,6 +340,7 @@ displayCardsContainer.addEventListener('click', (e) => {
         item.status = item.status === 'watchLater'
             ? 'none'
             : 'watchLater';
+        saveItems(data);
     }
     
     if (statusBtn) {
@@ -348,6 +352,7 @@ displayCardsContainer.addEventListener('click', (e) => {
         const item = data.find(elem => elem.id === id);
 
         item.status = status; 
+        saveItems(data);
     }
 
     if (moreBtn) {
@@ -392,3 +397,5 @@ function handleStatus(e) {
 watchlistFilters.addEventListener('click', (e) => { 
     handleStatus(e); 
 })
+
+renderHomepage();

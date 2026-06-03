@@ -1,11 +1,13 @@
+const STORAGE_KEY = "my-list";
+
 export function saveItems(data) {
-    localStorage.setItem("Data", JSON.stringify(data))
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
 }
 
-export function loadItems(data) {
-    const saved = localStorage.getItem("Data");
+export function loadItems() {
+    const saved = 
+        localStorage.getItem(STORAGE_KEY);
 
-    if (saved) {
-        data = JSON.parse(saved)
-    }
+    return saved ? JSON.parse(saved) : null;
 }
