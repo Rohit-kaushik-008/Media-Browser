@@ -4,7 +4,7 @@ export function searchItem(data, text) {
 
     return data.filter((elem) => {
         return (
-            elem.title.toLowerCase().includes(text)
+            elem.title.toLowerCase().includes(searchText)
         );
     })
 }

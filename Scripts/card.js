@@ -45,6 +45,25 @@ export function createCard(show) {
                                     class="more-btn">
                                         &vellip;
                                 </button>
+
+                                <div class="status-menu hidden">
+                                    <button data-status="watchLater">
+                                        Watch Later
+                                    </button>
+
+                                    <button data-status="watching">
+                                        Watching
+                                    </button>
+
+                                    <button data-status="watched">
+                                        Completed
+                                    </button>
+
+                                    <button data-status="none">
+                                        Remove
+                                    </button>
+                                </div>
+
                             </div>
                     </div>
     

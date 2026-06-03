@@ -42,7 +42,6 @@
 
 
 #results-section {
-    /* border: 2px solid white; */
     height: auto;
 }
 
@@ -86,10 +85,5 @@
 .most-fav.deactivate, 
 .top-shows.deactivate, 
 .top-movies.deactivate {
-    display: none;
-}
-
-
-.hidden {
     display: none;
 }

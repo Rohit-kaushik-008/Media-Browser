@@ -48,7 +48,6 @@
     box-sizing: border-box;
     cursor: default;
     scroll-behavior: smooth;
-    /* outline: 2px solid red */
 }
 
 *::-webkit-scrollbar {
@@ -556,32 +555,73 @@ body {
     flex-shrink: 0;
     position: absolute;
     bottom: 80px;
-    right: 5px;
+    right: 10px;
     z-index: 10;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(5px);
-    transition: all 0.3s ease-in;
-}
-
-.card:hover .card-actions {
-    visibility: visible;
-    transform: translateX(0px);
-    opacity: 1;
 }
 
 .card-actions img {
+    padding: calc(var(--space-xs) * 0.75); 
+    border: none;
+    border-radius: var(--space-xs);
     width: 30px;
     filter: invert(1);
     cursor: pointer;
+    background-color:  #b3e26a;
+    box-shadow: 2px 2px 18px #b3e26a;
 }
 
 .card-actions button {
-    background: none;
-    border: none;
+    background: var(--background-color);
+    padding: 0 calc(var(--space-xs)); 
+    border: 1px solid var(--text-muted);
+    border-radius: 50%;
     color: var(--text-color);
     font-size: var(--space-xl);
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+.card-actions .more-btn {
+    position: relative;
+}
+
+.card-actions .status-menu {
+    position: absolute;
+    top: -175px; 
+    left: 20%;
+
+    background-color: var(--background-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+
+    padding: var(--space-md) var(--space-sm);
+
+    border: none;
+    border-radius: var(--space-sm);
+
+    width: 150px;
+
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-actions .status-menu button {
+    margin: var(--space-xs) 0;
+    background-color: var(--background-color-light);
+    border: none;
+    border-radius: var(--space-xs); 
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--space-normal);
+    transform: all 0.1s ease;
+    width: 100%;
+}
+
+.status-menu button:active {
+    background: var(--background-color-light);
 }
 
 .filter-option {
@@ -731,10 +771,6 @@ body {
     filter: invert(1);
     cursor: pointer;
 }
-
-/* .display-section {
-    display: none;
-} */
 
 .watchlist-container {
     padding: var(--space-sm);

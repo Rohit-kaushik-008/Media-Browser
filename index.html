@@ -41,8 +41,6 @@
 
     </header>
 
-
-
     <!-- ============/ CHUNK 2 - HERO + SEARCH BAR /============ -->
 
     <main class="hero">
@@ -63,8 +61,6 @@
 
     </main>
 
-
-
     <!-- ===========/ CHUNK 3 - FILTER & SIDEBAR /=========== -->
     <main class="filter-features">
 
@@ -78,7 +74,6 @@
                 <h2>My List</h2>
             </div>
 
-
             <div class="filter-heading">
                 <h2>Filters</h2>
                 <div class="flex">
@@ -86,8 +81,6 @@
                     <button class="close-filter"><img src="Assets/menu.png" alt=""></button>
                 </div>
             </div>
-
-
 
             <div class="filter-type">
                 <h3>Type</h3>
@@ -153,18 +146,11 @@
 
             </div>
 
-
-
-
-
-
-
         </aside>
-
-
 
         <!-- ===========/ CHUNK 4 - DISPLAY RESULTS /=========== -->
         <section class="display-cards">
+            
 
             <div class="filter-option">
 
@@ -216,13 +202,6 @@
             </div>
 
 
-
-
-
-
-
-
-
             <div class="watchlist-container hidden">
 
                 <h2 class="watchlist-heading">My Watchlist</h2>
@@ -231,13 +210,21 @@
 
 
                     <div class="watchlist-filters">
-                        <h3 class="status-button" data-status="watchLater">
+                        <h3 
+                            class="status-button watchLater" 
+                            data-filter-status="watchLater">
                             Watch Later
                         </h3>
-                        <h3 class="status-button" data-status="watching">
+
+                        <h3 
+                            class="status-button watching"
+                            data-filter-status="watching">
                             Watching
                         </h3>
-                        <h3 class="status-button" data-status="watched">
+
+                        <h3 
+                            class="status-button watched"
+                            data-filter-status="watched">
                             Completed
                         </h3>
                     </div>
@@ -254,17 +241,6 @@
             </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
 
             <div class="display-section trending">
 
@@ -314,23 +290,11 @@
             </div>
 
 
+        
         </section>
 
 
     </main>
-
-
-    <!--   CHUNK 5 - FOOTER -->
-
-    <footer class="footer">
-
-
-
-    </footer>
-
-
-
-
 
     <script type="module" src="/Scripts/app.js"></script>
 
