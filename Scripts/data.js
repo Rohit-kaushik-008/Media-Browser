@@ -216,7 +216,7 @@ export const data =[
     "genre": [
       "Comedy"
     ],
-    "image": "https://i.pinimg.com/webp/1200x/2c/5c/2b/2c5c2b3b82e42f93529a27aed9d2ed45.webp"
+    "image": "https://i.pinimg.com/736x/0e/15/bb/0e15bbb4a0c6914b4c8008b0d395bb28.jpg"
   },
   {
     "id": 15,
